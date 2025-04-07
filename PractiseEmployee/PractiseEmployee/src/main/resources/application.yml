@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true  # Enabling H2 Console to access the database via the browser
+  jpa:
+    hibernate:
+      ddl-auto: create  # Create tables on startup
+    show-sql: true  # To log SQL queries to console
+    database-platform: org.hibernate.dialect.H2Dialect  # Specify the H2 dialect
